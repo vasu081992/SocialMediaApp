@@ -55,6 +55,20 @@ function Rightbar() {
                 </div>
                    <span className="rightBarUserName">Johny Depp</span>
               </li>
+              <li className="rightBarFriend">
+                <div className="rightBarProfileImageContainer">
+                   <img src="assets/person/3.jpeg" alt="" className="rightBarProfileImage" />
+                   <span className='rightBarOnline'></span>
+                </div>
+                   <span className="rightBarUserName">Johny Depp</span>
+              </li>
+              <li className="rightBarFriend">
+                <div className="rightBarProfileImageContainer">
+                   <img src="assets/person/3.jpeg" alt="" className="rightBarProfileImage" />
+                   <span className='rightBarOnline'></span>
+                </div>
+                   <span className="rightBarUserName">Johny Depp</span>
+              </li>
               </ul>
        </div> 
     </div>
