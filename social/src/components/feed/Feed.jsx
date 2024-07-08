@@ -5,7 +5,7 @@ import Post from '../Post/Post'
 import {Posts} from '../../pages/dummyData.js'
 
 function feed() {
-
+ 
   return (
     <div className='feed'>
      <div className="feedWrapper">
@@ -13,7 +13,6 @@ function feed() {
         {Posts.map((item)=>(
           <Post key={item.id} post={item}/>
         ))}
-        <Post/>
      </div>
     </div>
   )
