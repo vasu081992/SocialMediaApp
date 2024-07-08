@@ -1,7 +1,12 @@
 import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './Post.css'
-function Post() {
+
+
+
+function Post({post}) {
+
+  console.log("posts via props",post)
   return (
     <div className='post'> 
           <div className="postWrapper">

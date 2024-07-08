@@ -2,6 +2,7 @@ import React from 'react'
 import './Feed.css'
 import Share from '../Share/Share'
 import Post from '../Post/Post'
+import {Posts} from '../../pages/dummyData.js'
 
 function feed() {
 
@@ -9,11 +10,9 @@ function feed() {
     <div className='feed'>
      <div className="feedWrapper">
         <Share/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        {Posts.map((item)=>(
+          <Post key={item.id} post={item}/>
+        ))}
         <Post/>
      </div>
     </div>
