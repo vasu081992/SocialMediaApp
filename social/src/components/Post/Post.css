@@ -60,6 +60,16 @@
 
 }
 
+.likeButtonLiked{
+
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  color: #1877F2;
+}
+
 .likeButton{
 
   border-radius: 50%;
@@ -67,8 +77,10 @@
   cursor: pointer;
   height: 24px;
   width: 24px;
+  color:  #1877F2;
 
 }
+
 .postlikeCounter{
   font-size: 15px;
 }

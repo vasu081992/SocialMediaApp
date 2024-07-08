@@ -1,19 +1,15 @@
 import React from 'react'
-import Topbar from '../../components/Topbar/Topbar'
-import Sidebar from '../../components/sidebar/Sidebar'
-import Feed from '../../components/feed/Feed'
-import Rightbar  from '../../components/rightbar/Rightbar'
+import Profile from '../../components/Profile/Profile'
+import Login from '../../components/Login/Login'
+import Register from '../../components/Register/Register'
+
 import './Home.css'
 
 function HomePage() {
   return (
 <> 
-    <Topbar/>
-    <div className="homeContainer">
-      <Sidebar/>
-      <Feed/>
-      <Rightbar/>
-    </div>
+
+<Profile/>
 
 </>
   )

@@ -2,11 +2,28 @@ import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './Post.css'
 import {Users} from '../../pages/dummyData.js'
-
-
+import { useState } from 'react';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import LikeIcon from '../LikeIcon/LikeIcon.jsx';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
 function Post({post}) {
 
+  const [like,setLike] = useState(post.like);
+  const [isLiked,setIsLiked] = useState(false)
+
+const handleLike = ()=>{
+
+  if(!isLiked){
+  setLike((prev)=>prev+1)
+  setIsLiked(!isLiked)
+  }
+  else{
+    setLike(post.like)
+    setIsLiked(!isLiked)
+  }
+
+}
   console.log("posts via props",post)
   return (
     <div className='post'> 
@@ -27,9 +44,10 @@ function Post({post}) {
           </div>
           <div className='postBottom'>
             <div className="postBottomLeft">
-               <img className='likeButton' src="assets/posts/heart.png" alt="heart" />
-               <img className='likeButton' src="assets/posts/like.png" alt="heart" />
-               <span className="postlikeCounter">{post?.like} people like it !</span>
+               {/* <img className='likeButton' src={<ThumbUpOffAltIcon/>} alt="heart"onClick={handleLike} />
+               <img className='likeButton' src="assets/posts/like.png" alt="heart" onClick={handleLike} /> */}
+               {isLiked?<ThumbUpAltIcon className='likeButtonLiked' onClick={handleLike}/> : <ThumbUpOffAltIcon className='likeButton' onClick={handleLike}/> }
+               <span className="postlikeCounter">{like} people like it !</span>
             </div>
             <div className="postBottomRight">
                 <span className="postCommentText">{post?.comments} comments</span>
